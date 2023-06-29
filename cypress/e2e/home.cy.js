@@ -12,10 +12,6 @@ describe('template spec', () => {
       cy.visit('http://localhost:3000/')
     })
 
-    it('xpath_test', () => {
-      cy.visit('https://example.cypress.io')
-      cy.xpath('//h1').contains("Kitchen Sink")
-      cy.xpath('//h1').should('have.length', 3);
-    });
+
   
 })
