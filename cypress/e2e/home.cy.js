@@ -1,5 +1,5 @@
 describe('template spec', () => {
- /* it('primera_prueba', () => {
+   it('primera_prueba', () => {
     cy.visit('http://localhost:3000/')
   })
 
@@ -10,7 +10,7 @@ describe('template spec', () => {
     
     it('tercera_prueba', () => {
       cy.visit('http://localhost:3000/')
-    })*/
+    })
 
     //********En e2e.js esta el comando para permitir comandos tipo xpath*****//
     it('xpath_test', () => {
@@ -18,6 +18,13 @@ describe('template spec', () => {
       cy.xpath('//h1').contains("Kitchen Sink") //------(docs.cypress.io/guides/references/assertions)
       cy.xpath('//h1').should('have.length', 1);
       cy.xpath('//h1').should('equal', "Kitchen Sink")
+    });
+
+    it('xpath_test_2_tarea', () => {
+      cy.visit('https://example.cypress.io/todo')
+      cy.xpath('//h1').contains("todos") //------(docs.cypress.io/guides/references/assertions)
+      cy.xpath('//h1').should('have.length', 3);
+      cy.xpath('//h1').should('not equal', "commands")
     });
 
     it.only("Las caracteristicas son correctas", () => {

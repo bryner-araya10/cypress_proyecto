@@ -3,6 +3,7 @@ import homePage from "../pages/homePage"
 describe('HOME 2', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
+    cy.fixture('example').as("data")
   })
 
   context("seccion 1", () => {
@@ -37,6 +38,7 @@ describe('HOME 2', () => {
     it("Course: Testing Your First Next.js Application", () => {
       cy.getByData("course-0").find("a").contains("Get started").click()
       cy.location("pathname").should("equal", "/testing-your-first-application")
+      cy.fixture("example").then(user => )
     })  
   })
   
